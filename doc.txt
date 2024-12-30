@@ -1,0 +1,5 @@
+mysql -u root -p
+create database booking ;
+php artisan migrate
+php artisan db:seed --class=DatabaseSeeder
+php artisan serve
