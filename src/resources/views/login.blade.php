@@ -51,7 +51,14 @@
                                     </div>
                                 </div>
                                 
-                                <button class="btn btn-lg btn-block btn-primary w-100" type="submit">Connecte</button>
+                                <button class="btn btn-lg btn-block btn-primary" type="submit" id="connecteButton" style="width: 30%; border-radius: 8px;">Connecte</button>
+                                <script>
+                                    document.getElementById('connecteButton').addEventListener('click', function() {
+                                        this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+                                        this.style.width = '30%';
+                                        this.style.borderRadius = '8px';
+                                    });
+                                </script>
                             </form>
 
                         </div>
