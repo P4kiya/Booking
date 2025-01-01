@@ -37,8 +37,8 @@
                                         <div class="invoice-info">
                                             <strong class="customer-text">Facture du</strong>
                                             <p class="invoice-details invoice-details-two">
-                                                Agence booking<br>
-                                                806 Massira 1,<br>
+                                                Agence heec<br>
+                                                772 socoma 1,<br>
                                                 Marrakech, MA <br>
                                             </p>
                                         </div>

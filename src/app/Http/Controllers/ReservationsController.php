@@ -14,10 +14,9 @@ use Illuminate\Support\Facades\Log;
 class ReservationsController extends Controller
 {
 
-    public function getReservations()
+    public function getReservations(Request $request)
     {
-        $reservations = reservations::all();
-        $reservations = reservations::where('status', '!=', 'Expire')->get();
+        $reservations = reservations::where('status', '!=', 'Expire')->paginate(8); // Changed to paginate by 8
         return view('reservation', compact('reservations'));
     }
     public function addReservation(Request $request)

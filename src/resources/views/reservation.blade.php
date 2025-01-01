@@ -8,14 +8,14 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="colEmpty">
-                        <h3 class="page-title"><a href="/reservation" style="color: black">Reservation</a></h3>
+                        <h3 class="page-title"><a href="/admin/reservation" style="color: black">Reservation</a></h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
                             <li class="breadcrumb-item active">Reservation</li>
                         </ul>
                     </div>
                     <div class="col-auto">
-                        <a href="/add-reservation" class="btn btn-primary">
+                        <a href="/admin/add-reservation" class="btn btn-primary">
                             <i class="fas fa-plus"></i>
                         </a>
                         <a class="btn btn-primary filter-btn" href="javascript:void(0);" id="filter_search">
@@ -87,10 +87,11 @@
                             <div class="card-body">
                                 <div class="inv-header mb-3 d-flex justify-content-between">
                                     <div>
-                                        <a href="/profile" class="avatar avatar-sm me-2">
-                                            <img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-04.jpg">
+                                        <a href="admin/profile" class="avatar avatar-sm me-2">
+                                            <img class="avatar-img rounded-circle"
+                                                src="{{ asset('assets/img/profiles/avatar-04.jpg') }}">
                                         </a>
-                                        <a class="text-dark" href="/profile">{{ $reservation->client->prenom }}
+                                        <a class="text-dark" href="admin/profile">{{ $reservation->client->prenom }}
                                             {{ $reservation->client->nom }}</a>
                                     </div>
                                     <div style="padding-top: 7px;">
@@ -138,7 +139,7 @@
                                 </div>
 
                                 <div class="invoice-id mb-3">
-                                    <a href="/view-reservation/{{ $reservation->id }}" class="text-primary btn-link"
+                                    <a href="/admin/view-reservation/{{ $reservation->id }}" class="text-primary btn-link"
                                         style="color: #230399 !important">#{{ $reservation->id }}</a>
                                 </div>
                                 <div class="row align-items-center" style="margin-top: -20px">
@@ -170,7 +171,7 @@
                                     <div class="col-auto">
                                         @if ($reservation->expire)
                                             <span class="badge bg-info-light">Expired</span>
-                                        @elseif($reservation->expire ==false)
+                                        @elseif($reservation->expire == false)
                                             @if ($reservation->status == 'En attente')
                                                 <span class="badge bg-warning-light">{{ $reservation->status }}</span>
                                             @elseif($reservation->status == 'Valide')
@@ -196,6 +197,30 @@
                     </div>
                 @endforeach
             </div>
+            <!-- Pagination -->
+            @if ($reservations->total() > 8)
+                <div class="row ">
+                    <div class="col s12">
+                        <div class="pagination-tab d-flex justify-content-center">
+                            <ul class="pagination mb-0">
+                                <li class="page-item {{ $reservations->currentPage() == 1 ? 'disabled' : '' }}">
+                                    <a class="page-link" href="{{ $reservations->previousPageUrl() }}" tabindex="-1"><i
+                                            class="feather-chevron-left mr-2"></i>Previous</a>
+                                </li>
+                                @for ($i = 1; $i <= $reservations->lastPage(); $i++)
+                                    <li class="page-item {{ $reservations->currentPage() == $i ? 'active' : '' }}">
+                                        <a class="page-link" href="{{ route('reservations', ['page' => $i]) }}">{{ $i }}</a>
+                                    </li>
+                                @endfor
+                                <li class="page-item {{ $reservations->currentPage() == $reservations->lastPage() ? 'disabled' : '' }}">
+                                    <a class="page-link" href="{{ $reservations->nextPageUrl() }}">Next<i
+                                            class="feather-chevron-right ml-2"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 @endsection

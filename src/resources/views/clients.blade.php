@@ -10,7 +10,7 @@
                     <div class="colEmpty">
                         <h3 class="page-title">Client</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active">Client</li>
                         </ul>
@@ -21,8 +21,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
-
+            </div>  
 
             <div class="row">
                 <div class="col s12">
@@ -48,13 +47,14 @@
                                                 <td>
                                                     <h2 class="table-avatar">
 
-                                                        <a href="/profile/{{ $client->id }}"
+                                                        <a href="/admin/profile/{{ $client->id }}"
                                                             class="avatar avatar-sm me-2">
                                                             <img class="avatar-img rounded-circle"
-                                                                src="assets/img/profiles/avatar-02.jpg" alt="User Image">
+                                                                src="{{ asset('assets/img/profiles/avatar-02.jpg') }}"
+                                                                alt="User Image">
                                                         </a>
 
-                                                        <a href="/profile/{{ $client->id }}">{{ $client->nom }}
+                                                        <a href="/admin/profile/{{ $client->id }}">{{ $client->nom }}
                                                             <span>{{ $client->cnie }}</span>
                                                         </a>
                                                     </h2>
