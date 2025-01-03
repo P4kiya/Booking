@@ -10,8 +10,8 @@
                     <div class="col s12">
                         <h3 class="page-title">Reservation</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="/reservation">Reservation</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/reservation">Reservation</a></li>
                             <li class="breadcrumb-item active">Ajoute Reservation</li>
                         </ul>
                     </div>
@@ -207,8 +207,14 @@
                                             <input type="text" class="form-control" placeholder="nom de signateur">
                                         </div>
                                         <div class="form-group right mb-4">
-                                            <button class="btn btn-primary" name="submit"
-                                                type="submit">Reserve</button>
+                                            <button class="btn btn-lg btn-block btn-primary" type="submit" id="reserveButton" style="width: 20%; border-radius: 8px;">Reserve</button>
+                                            <script>
+                                                document.getElementById('reserveButton').addEventListener('click', function() {
+                                                    this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+                                                    this.style.width = '20%';
+                                                    this.style.borderRadius = '8px';
+                                                });
+                                            </script>
                                         </div>
                                     </div>
                                 </div>

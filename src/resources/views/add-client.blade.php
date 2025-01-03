@@ -10,8 +10,8 @@
                     <div class="col s12">
                         <h3 class="page-title">Client</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="/clients">Client</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/clients">Client</a></li>
                             <li class="breadcrumb-item active">Ajoute Client</li>
                         </ul>
                     </div>
@@ -89,7 +89,14 @@
                                     <input type="text" name="status" value="active" style="display: none">
                                 </div>
                                 <div class="right-align mt-4">
-                                    <button type="submit" name="submit" class="btn btn-primary">Ajoute</button>
+                                    <button type="submit" name="submit" class="btn btn-lg btn-block btn-primary" id="addClientButton" style="width: 20%; border-radius: 8px;">Ajoute</button>
+                                    <script>
+                                        document.getElementById('addClientButton').addEventListener('click', function() {
+                                            this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+                                            this.style.width = '20%';
+                                            this.style.borderRadius = '8px';
+                                        });
+                                    </script>
                                 </div>
                             </form>
                         </div>

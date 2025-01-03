@@ -32,7 +32,11 @@ Route::get('/admin/login', [UserContoller::class, 'showLoginForm'])->name('login
 Route::post('/admin/login', [UserContoller::class, 'login']);
 
 Route::get('/admin/profile/{id}', function () { return view('profile'); })->middleware('checkuser');
+Route::get('/admin/profile/', function () { return view('profile'); })->middleware('checkuser');
+
 Route::get('/admin/settings', function () { return view('settings'); })->middleware('checkuser');
+
+
 
 Route::get('/admin', [Controller::class, 'showDashboard'])->name('dashboard')->middleware('checkuser');
 

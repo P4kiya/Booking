@@ -14,11 +14,11 @@
                 <span>Admin</span>
             </a>
             <div id="dropdown-profile" class="dropdown-content dropdown-menu">
-                <a class="dropdown-item" href="/profile"><i data-feather="user" class="me-1"></i>
+                <a class="dropdown-item" href="/admin/profile"><i data-feather="user" class="me-1"></i>
                     Profile</a>
-                <a class="dropdown-item" href="/settings"><i data-feather="settings" class="me-1"></i>
+                <a class="dropdown-item" href="/admin/settings"><i data-feather="settings" class="me-1"></i>
                     Parametres</a>
-                <a class="dropdown-item" href="/login"><i data-feather="log-out" class="me-1"></i>Deconnecter
+                <a class="dropdown-item" href="/admin/login"><i data-feather="log-out" class="me-1"></i>Deconnecter
                 </a>
             </div>
         </li>

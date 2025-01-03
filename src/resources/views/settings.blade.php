@@ -8,7 +8,7 @@
                     <div class="col s12">
                         <h3 class="page-title">Parametre</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active">Parametre Profile</li>
                         </ul>
@@ -84,7 +84,14 @@
                                     </div>
                                 </div>
                                 <div class="right-align">
-                                    <button type="submit" class="btn btn-primary">Change</button>
+                                    <button class="btn btn-lg btn-block btn-primary" type="submit" id="changeButton" style="width: 15%; border-radius: 8px;">Change</button>
+                                    <script>
+                                        document.getElementById('changeButton').addEventListener('click', function() {
+                                            this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+                                            this.style.width = '15%';
+                                            this.style.borderRadius = '8px';
+                                        });
+                                    </script>
                                 </div>
                             </form>
                             <!-- /Form -->

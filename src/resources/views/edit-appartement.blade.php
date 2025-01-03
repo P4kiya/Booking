@@ -8,8 +8,8 @@
                     <div class="col s12">
                         <h3 class="page-title">Appartements</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="/appartements">Appartements</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/appartements">Appartements</a></li>
                             <li class="breadcrumb-item active">Modifie appartement</li>
                         </ul>
                     </div>
@@ -81,7 +81,12 @@
                             </div>
                             <div class=" blog-categories-btn pt-0">
                                 <div class="bank-details-btn ">
-                                    <button name="submit" class="btn btn-primary me-2">Modifier</button>
+                                    <button name="submit" class="btn btn-primary me-2" id="editButton">Modifier</button>
+                                    <script>
+                                        document.getElementById('editButton').addEventListener('click', function() {
+                                            this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>

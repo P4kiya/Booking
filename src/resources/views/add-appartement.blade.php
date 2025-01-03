@@ -6,10 +6,10 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col s12">
-                        <h3 class="page-title"><a href="/appartements" style="color: black">Appartements</a></h3>
+                        <h3 class="page-title"><a href="/admin/appartements" style="color: black">Appartements</a></h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="/appartements">Appartements</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/appartements">Appartements</a></li>
                             <li class="breadcrumb-item active">Ajoute appartement</li>
                         </ul>
                     </div>
@@ -82,7 +82,14 @@
                             </div>
                             <div class=" blog-categories-btn pt-0">
                                 <div class="bank-details-btn ">
-                                    <button name="submit" class="btn btn-primary me-2">Ajouter</button>
+                                    <button name="submit" class="btn btn-lg btn-block btn-primary" id="addButton" style="width: 20%; border-radius: 8px;">Ajouter</button>
+                                    <script>
+                                        document.getElementById('addButton').addEventListener('click', function() {
+                                            this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+                                            this.style.width = '20%';
+                                            this.style.borderRadius = '8px';
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </form>

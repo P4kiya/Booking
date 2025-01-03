@@ -6,9 +6,9 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="colEmpty">
-                        <h3 class="page-title"><a href="/calendar" style="color: black">Calendar</a></h3>
+                        <h3 class="page-title"><a href="/admin/calendar" style="color: black">Calendar</a></h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
                             <li class="breadcrumb-item active">Calendar</li>
                         </ul>
                     </div>

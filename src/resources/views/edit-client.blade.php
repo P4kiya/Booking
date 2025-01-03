@@ -10,8 +10,8 @@
                     <div class="col s12">
                         <h3 class="page-title">Client</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="/clients">Client</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/clients">Client</a></li>
                             <li class="breadcrumb-item active">Modifier Client</li>
                         </ul>
                     </div>
@@ -90,7 +90,14 @@
                                     </div>
                                 </div>
                                 <div class="right-align mt-4">
-                                    <button type="submit" class="btn btn-primary">Modifier</button>
+                                    <button type="submit" class="btn btn-lg btn-block btn-primary" id="modifyButton" style="width: 15%; border-radius: 8px;">Modifier</button>
+                                    <script>
+                                        document.getElementById('modifyButton').addEventListener('click', function() {
+                                            this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+                                            this.style.width = '15%';
+                                            this.style.borderRadius = '8px';
+                                        });
+                                    </script>
                                 </div>
                             </form>
                         </div>

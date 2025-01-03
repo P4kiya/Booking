@@ -12,7 +12,7 @@
                             <div class="colEmpty">
                                 <h3 class="page-title">Profile</h3>
                                 <ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="/admin/">Dashboard</a></li>
                                     <li class="breadcrumb-item active">Profile</li>
                                 </ul>
                             </div>
@@ -53,47 +53,47 @@
                                     <ul class="activity-feed">
                                         <li class="feed-item">
                                             <div class="feed-date">Nov 16</div>
-                                            <span class="feed-text"><a href="profile.html">Brian Johnson</a> has paid the
-                                                invoice <a href="view-invoice.html">"#DF65485"</a></span>
+                                            <span class="feed-text"><a href="/admin/profile">Brian Johnson</a> has paid the
+                                                invoice <a href="/admin/view-invoice.html">"#DF65485"</a></span>
                                         </li>
                                         <li class="feed-item">
                                             <div class="feed-date">Nov 7</div>
-                                            <span class="feed-text"><a href="profile.html">Marie Canales</a> has accepted
-                                                your estimate <a href="view-estimate.html">#GTR458789</a></span>
+                                            <span class="feed-text"><a href="/admin/profile">Marie Canales</a> has accepted
+                                                your estimate <a href="/admin/view-estimate.html">#GTR458789</a></span>
                                         </li>
                                         <li class="feed-item">
                                             <div class="feed-date">Oct 24</div>
                                             <span class="feed-text">New expenses added <a
-                                                    href="expenses.html">"#TR018756</a></span>
+                                                    href="/admin/expenses.html">"#TR018756</a></span>
                                         </li>
                                         <li class="feed-item">
                                             <div class="feed-date">Oct 24</div>
                                             <span class="feed-text">New expenses added <a
-                                                    href="expenses.html">"#TR018756</a></span>
+                                                    href="/admin/expenses.html">"#TR018756</a></span>
                                         </li>
                                         <li class="feed-item">
                                             <div class="feed-date">Oct 24</div>
                                             <span class="feed-text">New expenses added <a
-                                                    href="expenses.html">"#TR018756</a></span>
+                                                    href="/admin/expenses.html">"#TR018756</a></span>
                                         </li>
                                         <li class="feed-item">
                                             <div class="feed-date">Oct 24</div>
                                             <span class="feed-text">New expenses added <a
-                                                    href="expenses.html">"#TR018756</a></span>
+                                                    href="/admin/expenses.html">"#TR018756</a></span>
                                         </li>
                                         <li class="feed-item">
                                             <div class="feed-date">Oct 24</div>
                                             <span class="feed-text">New expenses added <a
-                                                    href="expenses.html">"#TR018756</a></span>
+                                                    href="/admin/expenses.html">"#TR018756</a></span>
                                         </li>
                                         <li class="feed-item">
                                             <div class="feed-date">Jan 27</div>
-                                            <span class="feed-text"><a href="profile.html">Robert Martin</a> gave a review
-                                                for <a href="product-details.html">"Dell Laptop"</a></span>
+                                            <span class="feed-text"><a href="/admin/profile.html">Robert Martin</a> gave a review
+                                                for <a href="/admin/product-details.html">"Dell Laptop"</a></span>
                                         </li>
                                         <li class="feed-item">
                                             <div class="feed-date">Jan 14</div>
-                                            <span class="feed-text">New customer registered <a href="profile.html">"Tori
+                                            <span class="feed-text">New customer registered <a href="/admin/profile.html">"Tori
                                                     Carter"</a></span>
                                         </li>
                                     </ul>
