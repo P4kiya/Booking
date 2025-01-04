@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserContoller;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +32,7 @@ Route::post('/admin/calendar/store', [AgencyController::class, 'storeAgency'])->
 
 Route::get('/admin/login', [UserContoller::class, 'showLoginForm'])->name('login');
 Route::post('/admin/login', [UserContoller::class, 'login']);
+Route::post('/logout', [UserContoller::class, 'logout'])->name('logout');
 
 Route::get('/admin/profile/{id}', function () { return view('profile'); })->middleware('checkuser');
 Route::get('/admin/profile/', function () { return view('profile'); })->middleware('checkuser');
@@ -70,8 +73,6 @@ Route::post('/admin/edit-reservation/update/{id}', [ReservationsController::clas
 Route::get('/admin/reservation/delete/{id}', [ReservationsController::class, 'deleteReservation'])->name('delete_reservation')->middleware('checkuser');
 Route::get('/admin/view-reservation/{id}', [ReservationsController::class, 'ViewReservations'])->name('view_reservation')->middleware('checkuser');
 
-Route::get('/', function () {
-    return redirect('/admin');
-});
+Route::get('/', [AppartementController::class, 'index'])->name('index');
 
 

@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Log;
 
 class AppartementController extends Controller
 {
+
+    public function index()
+    {
+        $appartements = appartement::where('status', 'active')->paginate(8);
+        return view('client.index', compact('appartements'));
+    }
     public function getAppartements()
     {
         $appartements = appartement::paginate(6);
