@@ -22,7 +22,57 @@
 
     <main class="main-content">
 
+        <section class="property-section">
+            <img aria-hidden="true" alt="" class="property-image"
+                src="https://bookingenginecdn-2.hostaway.com/26310-logoUrl.jpg?width=3840&amp;quality=70&amp;format=webp&amp;v=2" />
+            <div class="overlay">
+                <div class="content">
+                    <h1 class="property-title" style="color: white; font-size: 58px;">
+                        Moroccan Booking and Smoky Retreat
+                    </h1>
+                    <p class="property-tagline" style="color: white;">BOOK DIRECT - No Booking Fees!</p>
+                    <div class="filters" style="background-color: white;color: black; padding: 20px 20px;border-radius:20px">
+                        <div class="filter-item">
+                        </div>
+                        <div class="filter-item">
+                            <div class="icon">
+                                <!-- Check-in Icon -->
+                                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="filter-content">
+                                <div class="filter-label">Check-in</div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="icon">
+                                <!-- Check-out Icon -->
+                                <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="filter-content">
+                                <div class="filter-label">Check-out</div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="icon">
+                                <!-- Guests Icon -->
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </div>
+                            <div class="filter-content">
+                                <div class="filter-label">Guests</div>
+                            </div>
+                        </div>
+                        <div class="search-button" style="padding-left: 50px;">
+                            <button type="button"style="border-radius:15px">
+                                <span>Search</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         @yield('content')
+
 
     </main>
 
